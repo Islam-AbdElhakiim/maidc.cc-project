@@ -1,0 +1,16 @@
+/**
+* this      
+    
+*/
+
+.logo {
+    display: inline-block;
+    width: var(--logo-width, 100px); /* Fallback to 100px if --logo-width is not defined */
+    height: var(--logo-height, 100%); /* Fallback to 100px if --logo-height is not defined */
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }             

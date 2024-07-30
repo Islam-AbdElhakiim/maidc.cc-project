@@ -1,0 +1,68 @@
+@import "styles.scss";
+
+
+// ** ******************************************************************
+/* All Components use Mobile First Approach starting from small to tablet to desktop
+/* All Components change dimentiioins through the same breakpoinits which are located at: 
+// ****************************************************************** **/
+
+
+// ** ******************************************************************
+/* start ltr layout style (mobile)
+// ****************************************************************** **/
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 6.25rem;
+    // border: 1px solid pink; 
+    --logo-width: 10rem;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        height: 50%;
+
+        li {
+            margin-inline: 1rem;
+            font-size: 1.2rem;
+            color: $info;
+            font-weight: 400;
+        }
+    }
+
+    //tablet 
+    @include bp-min-width($bp-bootstrap-md) {
+        flex-direction: row;
+        justify-content: center;
+        --logo-width: 14rem;
+
+        app-logo {
+            flex: 1;
+        }
+
+        ul {
+            flex: 1;
+        }
+    }
+
+    //desktop
+}
+
+// ** ******************************************************************
+/* start rtl layout style  
+// ****************************************************************** **/
+
+nav:dir(rtl) {
+
+    //tablet
+    @include bp-min-width($bp-bootstrap-md) {}
+
+    //desktop
+    @include bp-min-width($bp-bootstrap-xxl) {}
+}

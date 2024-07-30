@@ -1,0 +1,8 @@
+<nav class="top-bar" appPadding [paddingY]="0">
+    <app-logo></app-logo>
+    <ul>
+        @for (link of links; track link;) {
+            <li class="mat-primary">{{link}}</li>
+        }    
+    </ul>
+</nav>

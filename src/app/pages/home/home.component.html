@@ -1,0 +1,22 @@
+<main>
+    <!-- {{loading | async}} -->
+
+    <h2 appPadding>Users from another World!</h2>
+
+    <article>
+        <section class="cards-grid">
+            @if (usersData$ | async; as userData) {
+            @for (user of userData.data; track user.id) {
+            <app-user-card [user]="user" />
+            }
+            }
+            @else {
+            <h2>Ooops, Sorry No Users to show!</h2>
+            }
+        </section>
+        <mat-paginator [length]="(usersData$ | async)?.total || 0" [pageSize]="6" [pageSizeOptions]="[6, 12]"
+            aria-label="Select page" (page)="handlePageChange($event)">
+        </mat-paginator>
+    </article>
+
+</main>

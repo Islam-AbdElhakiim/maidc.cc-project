@@ -1,0 +1,23 @@
+// ** ******************************************************************
+/* All Components use Mobile First Approach starting from small to tablet to desktop
+/* All Components change dimentiioins through the same breakpoinits which are located at: 
+// ****************************************************************** **/
+
+@import "styles.scss";
+
+main {
+    // mobile
+    text-align: center;
+    .maxw{
+        max-width: 600px;
+        margin-inline: auto;
+        margin-block: 2rem;
+    }
+  //tablet
+  @include bp-min-width($bp-bootstrap-md) {
+  }
+
+  //desktop
+  @include bp-min-width($bp-bootstrap-xxl) {
+  }
+}

@@ -1,0 +1,8 @@
+@import "./variables.scss";
+
+
+@mixin bp-min-width($screen-size) {
+    @media only screen and (min-width: $screen-size) {
+        @content;
+    }
+}
